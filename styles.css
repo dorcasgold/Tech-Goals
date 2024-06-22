@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #1000ba;
+  color: white;
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 2em 0;
+}
+
+section {
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: -9px 4px 27px -1px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: -9px 4px 27px -1px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: -9px 4px 27px -1px rgba(0, 0, 0, 0.69);
+  transition: all 1.3s;
+}
+
+[data-testid="goal-section"]:hover {
+  box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
+  -webkit-box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
+  -moz-box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
+}
+
+h2 {
+  color: #1000ba;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+footer {
+  background-color: #1000ba;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 0 1em;
+  }
+}
