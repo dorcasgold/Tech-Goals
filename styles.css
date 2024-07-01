@@ -54,11 +54,6 @@ section {
   justify-content: space-between;
 }
 
-img {
-  width: 201px;
-  height: 201px;
-  border-radius: 1px;
-}
 
 [data-testid="goal-section"]:hover {
   box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
