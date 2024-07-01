@@ -13,13 +13,17 @@
     <h1 data-testid="main-title">My Goals for the Next 2 Years in Tech</h1>
   </header>
   <main>
-    <section data-testid="personal-info">
-      <h2>Personal Information</h2>
-      <p data-testid="slackDisplayName">Slack Name: YourSlackName</p>
-      <p data-testid="currentTimeUTC">Current Time in UTC: <!-- Time will be updated dynamically --></p>
-      <p data-testid="currentDay">Current Day: <!-- Day will be updated dynamically --></p>
-      <p data-testid="slackEmail">Slack Email: your-email@example.com</p>
-      <img src="path/to/your-profile-pic.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture">
+    <section data-testid="personal-info" class="personal-info">
+      <div>
+        <h2>Personal Information</h2>
+        <p data-testid="slackDisplayName">Slack Name: Dorcas Odetayo</p>
+        <p data-testid="currentTimeUTC">Current Time in UTC: <span id="current-time-utc"></span></p>
+        <p data-testid="currentDay">Current Day: <span id="current-day"></span></p>
+        <p data-testid="slackEmail">Slack Email: odetayodorcas123@gmail.com</p>
+      </div>
+      <div>
+        <img src="./dorcas.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture">
+      </div>
     </section>
     <section data-testid="goal-section" id="goal1">
       <h2 data-testid="goal-title">Master Advanced JavaScript</h2>
@@ -80,6 +84,20 @@
   <footer data-testid="footer">
     <p>&copy; 2024 My Tech Journey</p>
   </footer>
+
+  <script>
+    function updateTimeAndDay() {
+      const now = new Date();
+      const utcTime = now.toUTCString().slice(17, 25);
+      const day = now.toUTCString().slice(0, 3);
+
+      document.getElementById('current-time-utc').textContent = utcTime;
+      document.getElementById('current-day').textContent = day;
+    }
+
+    updateTimeAndDay();
+    setInterval(updateTimeAndDay, 1000);
+  </script>
 </body>
 
 </html>

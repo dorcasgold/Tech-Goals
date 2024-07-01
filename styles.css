@@ -1,4 +1,9 @@
-/* styles.css */
+:root {
+  --text: #006400;
+  --white: #ffffff;
+  --black: #312c30;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,11 +11,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f9;
+  background: #1D976C;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
-  background-color: #1000ba;
+  background-color: var(--black);
   color: white;
   width: 100%;
   padding: 1em 0;
@@ -29,7 +39,7 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: aliceblue;
   margin: 1em 0;
   padding: 1em;
   border-radius: 8px;
@@ -39,6 +49,17 @@ section {
   transition: all 1.3s;
 }
 
+.personal-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 201px;
+  height: 201px;
+  border-radius: 5px;
+}
+
 [data-testid="goal-section"]:hover {
   box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
   -webkit-box-shadow: -1px -9px 16px -1px rgba(16, 0, 186, 0.69);
@@ -46,7 +67,7 @@ section {
 }
 
 h2 {
-  color: #1000ba;
+  color: var(--text);
 }
 
 ul {
@@ -54,7 +75,7 @@ ul {
 }
 
 footer {
-  background-color: #1000ba;
+  background-color: var(--black);
   color: white;
   width: 100%;
   text-align: center;
@@ -66,5 +87,9 @@ footer {
   main {
     width: 100%;
     padding: 0 1em;
+  }
+
+  .personal-info {
+    flex-direction: column;
   }
 }
